@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource database {
+  provider          = "mysql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+model Author {
+  id      String @id @default(uuid())
+  name    String
+  address String
+  email   String @unique
+  phone   String @unique
+
+  books Book[]
+
+  @@map("authors")
+}
+
+model Book {
+  id          String @id @default(uuid())
+  isbn        String @unique
+  authorId    String
+  title       String
+  publishedAt DateTime
+  genre       String
+  synopsis    String
+  language    String
+
+  author Author @relation(fields: [authorId], references: [id], onDelete: Cascade)
+
+  @@map("books")
+}
