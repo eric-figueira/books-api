@@ -1,0 +1,24 @@
+{
+  "name": "books-api",
+  "version": "1.0.0",
+  "description": "A clean architecture RESTful API",
+  "main": "server.js",
+  "repository": "https://github.com/eric-figueira/books-api.git",
+  "author": "Éric Carvalho Figueira",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^8.0.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard-with-typescript": "^42.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "prettier": "^3.1.1",
+    "typescript": "*"
+  }
+}
