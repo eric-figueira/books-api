@@ -9,5 +9,5 @@ export interface Book {
   genre: string
   synopsis: string
   language: string
-  author?: Author
+  author: Author
 }
