@@ -27,7 +27,7 @@ export class UpdateBook implements UpdateBookUseCase {
 
     if (bookExists === undefined) { throw new Error('Book not found') }
 
-    const book = await this.updateBookRepository.update(data)
+    const book = await this.updateBookRepository.update(isbn, authorId, data)
 
     return book
   }
