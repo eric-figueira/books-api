@@ -13,7 +13,6 @@ export class FindAllBooksController implements Controller {
       return {
         statusCode: 201,
         body: {
-          message: 'Book created successfully',
           books
         }
       }

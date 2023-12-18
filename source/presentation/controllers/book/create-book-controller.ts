@@ -15,7 +15,14 @@ export class CreateBookController implements Controller {
       const { isbn, title, publishedAt, genre, synopsis, language } = request.body
       const { authorId } = request
 
-      if (authorId === undefined) throw new Error('AuthorID was undefined')
+      if (authorId === undefined) {
+        return {
+          statusCode: 400,
+          body: {
+            message: 'AuthorID was undefined'
+          }
+        }
+      }
 
       const book = await this.createBookUseCase.create({
         isbn,
