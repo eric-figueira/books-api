@@ -34,6 +34,5 @@ The idea of this project is to learn to create a clean architecture api using th
   - Middlewares: Defines and configures middlewares (cors, json, etc).
   - Routes: Assings each http route to its corresponding factory (the controller returned by the factory will be passed to a express controller adapter).
 - Obs: Notice how every layer (except Main and Infrastrucrure) depend on abstractions and interfaces. This idea of decoupling things is the base of SOLID and Clean Archicture, making things independent and easier to maintain and fix bugs. Not only, but the whole application is not based on a single database type or node.js framework, which implies that if you'd like to change those things, minor changes would have to be done but not the whole api or logic
-<br>
-<br>
-- Thanks to [João Pedro F. Barbosa](https://github.com/ojpbarbosa) and [Marcos Godinho Filho](https://github.com/Marcos-Godinho-Filho) for teaching me and clearing up my doubts about these topics.
+
+Thanks to [João Pedro F. Barbosa](https://github.com/ojpbarbosa) and [Marcos Godinho Filho](https://github.com/Marcos-Godinho-Filho) for teaching me and clearing up my doubts about these topics.
