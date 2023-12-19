@@ -2,7 +2,7 @@ import { UpdateBook } from '../../../../application/use-cases'
 import { findBookByIsbnRepository, updateBookRepository } from '../../../../infrastructure/database/mysql'
 import { UpdateBookController } from '../../../../presentation/controllers'
 
-export const UpdateBookControllerFactory = (): UpdateBookController => {
+export const updateBookControllerFactory = (): UpdateBookController => {
   const updateBookUseCase = new UpdateBook(
     findBookByIsbnRepository,
     updateBookRepository

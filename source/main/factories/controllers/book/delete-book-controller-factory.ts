@@ -2,7 +2,7 @@ import { DeleteBook } from '../../../../application/use-cases'
 import { deleteBookRepository, findBookByIsbnRepository } from '../../../../infrastructure/database/mysql'
 import { DeleteBookController } from '../../../../presentation/controllers'
 
-export const DeleteBookControllerFactory = (): DeleteBookController => {
+export const deleteBookControllerFactory = (): DeleteBookController => {
   const deleteBookUseCase = new DeleteBook(
     findBookByIsbnRepository,
     deleteBookRepository

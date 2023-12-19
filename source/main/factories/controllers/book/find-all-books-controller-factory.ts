@@ -2,7 +2,7 @@ import { FindAllBooks } from '../../../../application/use-cases'
 import { findAllBooksRepository } from '../../../../infrastructure/database/mysql'
 import { FindAllBooksController } from '../../../../presentation/controllers'
 
-export const FindAllBooksControllerFactory = (): FindAllBooksController => {
+export const findAllBooksControllerFactory = (): FindAllBooksController => {
   const findAllBooksUseCase = new FindAllBooks(
     findAllBooksRepository
   )

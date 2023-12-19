@@ -2,7 +2,7 @@ import { CreateBook } from '../../../../application/use-cases'
 import { createBookRepository, findBookByIsbnRepository } from '../../../../infrastructure/database/mysql'
 import { CreateBookController } from '../../../../presentation/controllers'
 
-export const CreateBookControllerFactory = (): CreateBookController => {
+export const createBookControllerFactory = (): CreateBookController => {
   const createBookUseCase = new CreateBook(
     findBookByIsbnRepository,
     createBookRepository
