@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-misused-promises */
 import { type Router } from 'express'
 import {
   createBookControllerFactory,
@@ -7,35 +8,36 @@ import {
   findBooksByAuthorControllerFactory,
   updateBookControllerFactory
 } from '../factories/controllers'
+import { expressControllerAdapter } from '../adapters/express'
 
 export const setupBookRoutes = (router: Router): void => {
   router.get(
     '/books',
-    findAllBooksControllerFactory()
+    expressControllerAdapter(findAllBooksControllerFactory())
   )
 
   router.get(
     '/books:isbn',
-    findBookByIsbnControllerFactory()
+    expressControllerAdapter(findBookByIsbnControllerFactory())
   )
 
   router.get(
     '/books:authorId',
-    findBooksByAuthorControllerFactory()
+    expressControllerAdapter(findBooksByAuthorControllerFactory())
   )
 
   router.post(
     '/books',
-    createBookControllerFactory()
+    expressControllerAdapter(createBookControllerFactory())
   )
 
   router.delete(
     '/books:isbn',
-    deleteBookControllerFactory()
+    expressControllerAdapter(deleteBookControllerFactory())
   )
 
   router.patch(
     '/books:isbn',
-    updateBookControllerFactory()
+    expressControllerAdapter(updateBookControllerFactory())
   )
 }
