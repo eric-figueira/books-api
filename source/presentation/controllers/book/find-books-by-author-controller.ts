@@ -1,7 +1,7 @@
 import { type Request, type Response, type Controller } from '../../../application/ports'
 import { type FindBooksByAuthorUseCase } from '../../../core/use-cases'
 
-export class FindBookByAuthorController implements Controller {
+export class FindBooksByAuthorController implements Controller {
   constructor (
     private readonly findBooksByAuthorUseCase: FindBooksByAuthorUseCase
   ) {}
